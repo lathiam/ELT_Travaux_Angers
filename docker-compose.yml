@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  airflow:
+    image: apache/airflow:2.8.1-python3.9
+    container_name: airflow
+    restart: always
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - TABLE_ID=my-project-travaux-angers.travaux_angers.travaux_angers
+      - DATASET_ID=my-project-travaux-angers.travaux_angers
+      - PROJECT_ID=my-project-travaux-angers
+    volumes:
+      - ./extract.py:/opt/airflow/extract.py
+      - ./load.py:/opt/airflow/load.py
+      - ./requirement.txt:/opt/airflow/requirement.txt
+      - ./credentiels:/opt/airflow/credentiels
+      - ./data:/opt/airflow/data
+      - ./airflow:/opt/airflow/dags
+    ports:
+      - "8080:8080"
+    command: bash -c "pip install --no-cache-dir -r /opt/airflow/requirement.txt && airflow db init && airflow webserver"
+
