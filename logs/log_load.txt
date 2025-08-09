@@ -1,0 +1,6 @@
+2025-08-09 15:17:53,063 - INFO - Début du script load.py
+2025-08-09 15:17:53,063 - INFO - Chemin du fichier CSV : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-09 15:17:53,157 - INFO - Client BigQuery initialisé
+2025-08-09 15:17:53,157 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
+2025-08-09 15:17:53,158 - INFO - Début du chargement des données dans BigQuery
+2025-08-09 15:17:57,448 - INFO - Chargement terminé dans BigQuery
