@@ -2509,3 +2509,54 @@ Sortie:
 [0m10:56:34  
 [0m10:56:34  Done. PASS=6 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=7
 
+2025-08-10 14:50:07,805 INFO:Début de l'ETL
+2025-08-10 14:50:07,806 INFO:Exécution de extract.py...
+2025-08-10 14:50:18,402 INFO:extract.py terminé
+2025-08-10 14:50:18,402 INFO:Exécution de load.py...
+2025-08-10 14:50:25,339 INFO:load.py terminé
+2025-08-10 14:50:25,340 INFO:Début des transformations DBT...
+2025-08-10 14:50:25,340 INFO:Exécution des commandes DBT depuis : /usr/ELT_Travaux_Angers/dbt
+2025-08-10 14:50:25,340 INFO:Exécution de 'dbt deps'...
+2025-08-10 14:50:31,521 INFO:Sortie de dbt deps :
+[0m12:50:29  Running with dbt=1.10.7
+[0m12:50:30  Installing dbt-labs/dbt_utils
+[0m12:50:30  Installed from version 1.1.1
+[0m12:50:30  Updated version available: 1.3.0
+[0m12:50:30  
+[0m12:50:30  Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+
+2025-08-10 14:50:31,522 INFO:Commande DBT réussie: dbt deps
+2025-08-10 14:50:31,522 INFO:Exécution de 'dbt run'...
+2025-08-10 14:51:19,951 INFO:Sortie de dbt run :
+[0m12:50:36  Running with dbt=1.10.7
+[0m12:50:45  Registered adapter: bigquery=1.10.1
+[0m12:50:46  Found 1 analysis, 8 models, 34 data tests, 1 source, 610 macros
+[0m12:50:46  
+[0m12:50:46  Concurrency: 1 threads (target='dev')
+[0m12:50:46  
+[0m12:50:50  1 of 8 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m12:50:51  1 of 8 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.49s]
+[0m12:50:51  2 of 8 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m12:50:55  2 of 8 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 3.53s]
+[0m12:50:55  3 of 8 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m12:50:56  3 of 8 OK created sql view model travaux_angers.check_source ................... [[32mCREATE VIEW (0 processed)[0m in 1.04s]
+[0m12:50:56  4 of 8 START sql table model travaux_angers_bronze.src_travaux_angers .......... [RUN]
+[0m12:51:00  4 of 8 OK created sql table model travaux_angers_bronze.src_travaux_angers ..... [[32mCREATE TABLE (46.0 rows, 8.0 MiB processed)[0m in 4.76s]
+[0m12:51:00  5 of 8 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m12:51:07  5 of 8 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (46.0 rows, 8.0 MiB processed)[0m in 6.19s]
+[0m12:51:07  6 of 8 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m12:51:10  6 of 8 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (46.0 rows, 10.7 KiB processed)[0m in 3.02s]
+[0m12:51:10  7 of 8 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m12:51:14  7 of 8 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (4.9k rows, 11.4 KiB processed)[0m in 4.08s]
+[0m12:51:14  8 of 8 START sql table model travaux_angers_gold.fct_travaux_stats_geo ......... [RUN]
+[0m12:51:17  8 of 8 OK created sql table model travaux_angers_gold.fct_travaux_stats_geo .... [[32mCREATE TABLE (0.0 rows, 1.8 MiB processed)[0m in 3.02s]
+[0m12:51:17  
+[0m12:51:17  Finished running 5 table models, 3 view models in 0 hours 0 minutes and 31.23 seconds (31.23s).
+[0m12:51:17  
+[0m12:51:17  [32mCompleted successfully[0m
+[0m12:51:17  
+[0m12:51:17  Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+
+2025-08-10 14:51:19,952 INFO:Transformations DBT terminées avec succès
+2025-08-10 14:51:19,953 INFO:ETL terminé avec succès

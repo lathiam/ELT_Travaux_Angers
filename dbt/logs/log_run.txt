@@ -354,3 +354,5 @@ Sortie:
 [0m10:56:34  
 [0m10:56:34  Done. PASS=6 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=7
 
+2025-08-10 14:50:31 - Commande DBT réussie: dbt deps
+2025-08-10 14:51:19 - Transformations DBT terminées avec succès

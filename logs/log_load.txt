@@ -146,3 +146,10 @@
 2025-08-10 12:55:54,746 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
 2025-08-10 12:55:54,747 - INFO - Début du chargement des données dans BigQuery
 2025-08-10 12:55:58,413 - INFO - Chargement terminé dans BigQuery
+2025-08-10 14:50:20,283 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 14:50:20,284 - INFO - Début du script load.py
+2025-08-10 14:50:20,284 - INFO - Chemin du fichier CSV : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 14:50:20,516 - INFO - Client BigQuery initialisé
+2025-08-10 14:50:20,516 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
+2025-08-10 14:50:20,516 - INFO - Début du chargement des données dans BigQuery
+2025-08-10 14:50:25,062 - INFO - Chargement terminé dans BigQuery

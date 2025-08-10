@@ -20,8 +20,8 @@ WITH src AS (
     CAST(title       AS STRING)  AS title_raw,
     CAST(description AS STRING)  AS description_raw,
     CAST(address     AS STRING)  AS address_raw,
-    SAFE_CAST(startat AS DATETIME) AS startat_raw,  -- source: startat
-    SAFE_CAST(endat   AS DATETIME) AS endat_raw,    -- source: endat
+    SAFE_CAST(startat AS DATETIME) AS startat_raw,
+    SAFE_CAST(endat   AS DATETIME) AS endat_raw,
     CAST(location   AS STRING)    AS location_raw,
     CURRENT_TIMESTAMP()           AS _loaded_at
   FROM `my-project-travaux-angers`.`travaux_angers`.`travaux_angers`
@@ -42,7 +42,7 @@ txt AS (
   FROM src
 ),
 
--- 3) Typage + dérivés (CTE NOMMÉE DIFFÉREMMENT)
+-- 3) Typage + dérivés
 typed_rows AS (
   SELECT
     id_clean          AS id,
@@ -62,7 +62,7 @@ typed_rows AS (
   FROM txt
 ),
 
--- 4) Géométrie robuste
+-- 4) Géométrie robuste (GeoJSON / WKT / "lon,lat")
 geo AS (
   SELECT
     t.*,
@@ -78,15 +78,15 @@ geo AS (
         ST_GEOGFROMTEXT(location_str)
       WHEN REGEXP_CONTAINS(location_str, r'^\s*-?\d+(\.\d+)?\s*,\s*-?\d+(\.\d+)?\s*$') THEN
         ST_GEOGPOINT(
-          CAST(SPLIT(location_str, ',')[OFFSET(0)] AS FLOAT64), -- lon
-          CAST(SPLIT(location_str, ',')[OFFSET(1)] AS FLOAT64)  -- lat
+          CAST(SPLIT(location_str, ',')[OFFSET(0)] AS FLOAT64),
+          CAST(SPLIT(location_str, ',')[OFFSET(1)] AS FLOAT64)
         )
       ELSE NULL
     END AS position
   FROM typed_rows t
 ),
 
--- 5) Déduplication sans DISTINCT sur GEOGRAPHY
+-- 5) Déduplication (sans DISTINCT sur GEOGRAPHY)
 dedup AS (
   SELECT
     *,
@@ -108,16 +108,13 @@ SELECT
   title,
   description,
   address,
-
   start_at,
   end_at,
   start_date,
   end_date,
-
   position,
   ST_ASTEXT(position) AS position_wkt,
   CASE WHEN position IS NOT NULL THEN 'Oui' ELSE 'Non' END AS a_geometrie,
-
   location_str,
   _loaded_at,
   CURRENT_TIMESTAMP() AS _staged_at
