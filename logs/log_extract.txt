@@ -2860,3 +2860,187 @@
 2025-08-10 03:00:48,085 - INFO - Requête 45/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=44
 2025-08-10 03:00:48,209 - INFO - 0 résultats ajoutés (total : 990)
 2025-08-10 03:00:48,240 - INFO - Toutes les données ont été enregistrées dans /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 11:44:48,550 - INFO - Début de la récupération des données.
+2025-08-10 11:44:48,551 - INFO - Requête 1/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=0
+2025-08-10 11:44:48,784 - INFO - 45 résultats ajoutés (total : 45)
+2025-08-10 11:44:48,784 - INFO - Requête 2/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=1
+2025-08-10 11:44:49,113 - INFO - 44 résultats ajoutés (total : 89)
+2025-08-10 11:44:49,113 - INFO - Requête 3/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=2
+2025-08-10 11:44:49,285 - INFO - 43 résultats ajoutés (total : 132)
+2025-08-10 11:44:49,285 - INFO - Requête 4/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=3
+2025-08-10 11:44:49,481 - INFO - 42 résultats ajoutés (total : 174)
+2025-08-10 11:44:49,482 - INFO - Requête 5/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=4
+2025-08-10 11:44:49,721 - INFO - 41 résultats ajoutés (total : 215)
+2025-08-10 11:44:49,721 - INFO - Requête 6/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=5
+2025-08-10 11:44:49,920 - INFO - 40 résultats ajoutés (total : 255)
+2025-08-10 11:44:49,920 - INFO - Requête 7/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=6
+2025-08-10 11:44:50,086 - INFO - 39 résultats ajoutés (total : 294)
+2025-08-10 11:44:50,086 - INFO - Requête 8/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=7
+2025-08-10 11:44:50,269 - INFO - 38 résultats ajoutés (total : 332)
+2025-08-10 11:44:50,271 - INFO - Requête 9/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=8
+2025-08-10 11:44:50,470 - INFO - 37 résultats ajoutés (total : 369)
+2025-08-10 11:44:50,470 - INFO - Requête 10/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=9
+2025-08-10 11:44:50,713 - INFO - 36 résultats ajoutés (total : 405)
+2025-08-10 11:44:50,714 - INFO - Requête 11/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=10
+2025-08-10 11:44:50,906 - INFO - 35 résultats ajoutés (total : 440)
+2025-08-10 11:44:50,907 - INFO - Requête 12/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=11
+2025-08-10 11:44:51,116 - INFO - 34 résultats ajoutés (total : 474)
+2025-08-10 11:44:51,116 - INFO - Requête 13/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=12
+2025-08-10 11:44:51,301 - INFO - 33 résultats ajoutés (total : 507)
+2025-08-10 11:44:51,301 - INFO - Requête 14/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=13
+2025-08-10 11:44:51,524 - INFO - 32 résultats ajoutés (total : 539)
+2025-08-10 11:44:51,525 - INFO - Requête 15/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=14
+2025-08-10 11:44:51,729 - INFO - 31 résultats ajoutés (total : 570)
+2025-08-10 11:44:51,730 - INFO - Requête 16/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=15
+2025-08-10 11:44:51,924 - INFO - 30 résultats ajoutés (total : 600)
+2025-08-10 11:44:51,924 - INFO - Requête 17/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=16
+2025-08-10 11:44:52,086 - INFO - 29 résultats ajoutés (total : 629)
+2025-08-10 11:44:52,086 - INFO - Requête 18/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=17
+2025-08-10 11:44:52,253 - INFO - 28 résultats ajoutés (total : 657)
+2025-08-10 11:44:52,253 - INFO - Requête 19/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=18
+2025-08-10 11:44:52,459 - INFO - 27 résultats ajoutés (total : 684)
+2025-08-10 11:44:52,460 - INFO - Requête 20/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=19
+2025-08-10 11:44:52,656 - INFO - 26 résultats ajoutés (total : 710)
+2025-08-10 11:44:52,656 - INFO - Requête 21/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=20
+2025-08-10 11:44:52,879 - INFO - 25 résultats ajoutés (total : 735)
+2025-08-10 11:44:52,880 - INFO - Requête 22/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=21
+2025-08-10 11:44:53,124 - INFO - 24 résultats ajoutés (total : 759)
+2025-08-10 11:44:53,124 - INFO - Requête 23/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=22
+2025-08-10 11:44:53,308 - INFO - 23 résultats ajoutés (total : 782)
+2025-08-10 11:44:53,308 - INFO - Requête 24/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=23
+2025-08-10 11:44:53,492 - INFO - 22 résultats ajoutés (total : 804)
+2025-08-10 11:44:53,492 - INFO - Requête 25/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=24
+2025-08-10 11:44:53,668 - INFO - 21 résultats ajoutés (total : 825)
+2025-08-10 11:44:53,669 - INFO - Requête 26/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=25
+2025-08-10 11:44:53,875 - INFO - 20 résultats ajoutés (total : 845)
+2025-08-10 11:44:53,875 - INFO - Requête 27/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=26
+2025-08-10 11:44:54,109 - INFO - 19 résultats ajoutés (total : 864)
+2025-08-10 11:44:54,110 - INFO - Requête 28/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=27
+2025-08-10 11:44:54,330 - INFO - 18 résultats ajoutés (total : 882)
+2025-08-10 11:44:54,331 - INFO - Requête 29/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=28
+2025-08-10 11:44:54,520 - INFO - 17 résultats ajoutés (total : 899)
+2025-08-10 11:44:54,520 - INFO - Requête 30/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=29
+2025-08-10 11:44:54,707 - INFO - 16 résultats ajoutés (total : 915)
+2025-08-10 11:44:54,707 - INFO - Requête 31/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=30
+2025-08-10 11:44:54,868 - INFO - 15 résultats ajoutés (total : 930)
+2025-08-10 11:44:54,868 - INFO - Requête 32/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=31
+2025-08-10 11:44:55,038 - INFO - 14 résultats ajoutés (total : 944)
+2025-08-10 11:44:55,038 - INFO - Requête 33/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=32
+2025-08-10 11:44:55,214 - INFO - 13 résultats ajoutés (total : 957)
+2025-08-10 11:44:55,214 - INFO - Requête 34/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=33
+2025-08-10 11:44:55,390 - INFO - 12 résultats ajoutés (total : 969)
+2025-08-10 11:44:55,390 - INFO - Requête 35/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=34
+2025-08-10 11:44:55,568 - INFO - 11 résultats ajoutés (total : 980)
+2025-08-10 11:44:55,568 - INFO - Requête 36/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=35
+2025-08-10 11:44:55,751 - INFO - 10 résultats ajoutés (total : 990)
+2025-08-10 11:44:55,751 - INFO - Requête 37/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=36
+2025-08-10 11:44:55,929 - INFO - 9 résultats ajoutés (total : 999)
+2025-08-10 11:44:55,930 - INFO - Requête 38/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=37
+2025-08-10 11:44:56,103 - INFO - 8 résultats ajoutés (total : 1007)
+2025-08-10 11:44:56,103 - INFO - Requête 39/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=38
+2025-08-10 11:44:56,329 - INFO - 7 résultats ajoutés (total : 1014)
+2025-08-10 11:44:56,329 - INFO - Requête 40/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=39
+2025-08-10 11:44:56,495 - INFO - 6 résultats ajoutés (total : 1020)
+2025-08-10 11:44:56,496 - INFO - Requête 41/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=40
+2025-08-10 11:44:56,798 - INFO - 5 résultats ajoutés (total : 1025)
+2025-08-10 11:44:56,798 - INFO - Requête 42/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=41
+2025-08-10 11:44:56,959 - INFO - 4 résultats ajoutés (total : 1029)
+2025-08-10 11:44:56,960 - INFO - Requête 43/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=42
+2025-08-10 11:44:57,523 - INFO - 3 résultats ajoutés (total : 1032)
+2025-08-10 11:44:57,523 - INFO - Requête 44/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=43
+2025-08-10 11:44:57,797 - INFO - 2 résultats ajoutés (total : 1034)
+2025-08-10 11:44:57,797 - INFO - Requête 45/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=44
+2025-08-10 11:44:57,961 - INFO - 1 résultats ajoutés (total : 1035)
+2025-08-10 11:44:58,051 - INFO - Toutes les données ont été enregistrées dans /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 12:55:42,942 - INFO - Début de la récupération des données.
+2025-08-10 12:55:42,944 - INFO - Requête 1/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=0
+2025-08-10 12:55:43,145 - INFO - 45 résultats ajoutés (total : 45)
+2025-08-10 12:55:43,145 - INFO - Requête 2/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=1
+2025-08-10 12:55:43,779 - INFO - 44 résultats ajoutés (total : 89)
+2025-08-10 12:55:43,779 - INFO - Requête 3/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=2
+2025-08-10 12:55:43,958 - INFO - 43 résultats ajoutés (total : 132)
+2025-08-10 12:55:43,959 - INFO - Requête 4/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=3
+2025-08-10 12:55:44,090 - INFO - 42 résultats ajoutés (total : 174)
+2025-08-10 12:55:44,090 - INFO - Requête 5/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=4
+2025-08-10 12:55:44,221 - INFO - 41 résultats ajoutés (total : 215)
+2025-08-10 12:55:44,221 - INFO - Requête 6/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=5
+2025-08-10 12:55:44,381 - INFO - 40 résultats ajoutés (total : 255)
+2025-08-10 12:55:44,381 - INFO - Requête 7/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=6
+2025-08-10 12:55:44,522 - INFO - 39 résultats ajoutés (total : 294)
+2025-08-10 12:55:44,522 - INFO - Requête 8/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=7
+2025-08-10 12:55:44,657 - INFO - 38 résultats ajoutés (total : 332)
+2025-08-10 12:55:44,657 - INFO - Requête 9/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=8
+2025-08-10 12:55:44,776 - INFO - 37 résultats ajoutés (total : 369)
+2025-08-10 12:55:44,776 - INFO - Requête 10/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=9
+2025-08-10 12:55:44,900 - INFO - 36 résultats ajoutés (total : 405)
+2025-08-10 12:55:44,900 - INFO - Requête 11/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=10
+2025-08-10 12:55:45,037 - INFO - 35 résultats ajoutés (total : 440)
+2025-08-10 12:55:45,037 - INFO - Requête 12/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=11
+2025-08-10 12:55:45,667 - INFO - 34 résultats ajoutés (total : 474)
+2025-08-10 12:55:45,667 - INFO - Requête 13/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=12
+2025-08-10 12:55:45,809 - INFO - 33 résultats ajoutés (total : 507)
+2025-08-10 12:55:45,809 - INFO - Requête 14/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=13
+2025-08-10 12:55:45,962 - INFO - 32 résultats ajoutés (total : 539)
+2025-08-10 12:55:45,962 - INFO - Requête 15/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=14
+2025-08-10 12:55:46,126 - INFO - 31 résultats ajoutés (total : 570)
+2025-08-10 12:55:46,127 - INFO - Requête 16/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=15
+2025-08-10 12:55:46,310 - INFO - 30 résultats ajoutés (total : 600)
+2025-08-10 12:55:46,311 - INFO - Requête 17/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=16
+2025-08-10 12:55:46,989 - INFO - 29 résultats ajoutés (total : 629)
+2025-08-10 12:55:46,989 - INFO - Requête 18/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=17
+2025-08-10 12:55:47,162 - INFO - 28 résultats ajoutés (total : 657)
+2025-08-10 12:55:47,162 - INFO - Requête 19/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=18
+2025-08-10 12:55:47,300 - INFO - 27 résultats ajoutés (total : 684)
+2025-08-10 12:55:47,300 - INFO - Requête 20/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=19
+2025-08-10 12:55:47,435 - INFO - 26 résultats ajoutés (total : 710)
+2025-08-10 12:55:47,435 - INFO - Requête 21/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=20
+2025-08-10 12:55:47,584 - INFO - 25 résultats ajoutés (total : 735)
+2025-08-10 12:55:47,584 - INFO - Requête 22/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=21
+2025-08-10 12:55:47,723 - INFO - 24 résultats ajoutés (total : 759)
+2025-08-10 12:55:47,723 - INFO - Requête 23/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=22
+2025-08-10 12:55:47,877 - INFO - 23 résultats ajoutés (total : 782)
+2025-08-10 12:55:47,877 - INFO - Requête 24/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=23
+2025-08-10 12:55:48,015 - INFO - 22 résultats ajoutés (total : 804)
+2025-08-10 12:55:48,016 - INFO - Requête 25/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=24
+2025-08-10 12:55:48,161 - INFO - 21 résultats ajoutés (total : 825)
+2025-08-10 12:55:48,161 - INFO - Requête 26/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=25
+2025-08-10 12:55:48,356 - INFO - 20 résultats ajoutés (total : 845)
+2025-08-10 12:55:48,356 - INFO - Requête 27/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=26
+2025-08-10 12:55:48,542 - INFO - 19 résultats ajoutés (total : 864)
+2025-08-10 12:55:48,542 - INFO - Requête 28/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=27
+2025-08-10 12:55:48,685 - INFO - 18 résultats ajoutés (total : 882)
+2025-08-10 12:55:48,686 - INFO - Requête 29/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=28
+2025-08-10 12:55:48,809 - INFO - 17 résultats ajoutés (total : 899)
+2025-08-10 12:55:48,809 - INFO - Requête 30/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=29
+2025-08-10 12:55:48,949 - INFO - 16 résultats ajoutés (total : 915)
+2025-08-10 12:55:48,949 - INFO - Requête 31/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=30
+2025-08-10 12:55:49,089 - INFO - 15 résultats ajoutés (total : 930)
+2025-08-10 12:55:49,089 - INFO - Requête 32/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=31
+2025-08-10 12:55:49,261 - INFO - 14 résultats ajoutés (total : 944)
+2025-08-10 12:55:49,261 - INFO - Requête 33/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=32
+2025-08-10 12:55:49,382 - INFO - 13 résultats ajoutés (total : 957)
+2025-08-10 12:55:49,382 - INFO - Requête 34/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=33
+2025-08-10 12:55:49,525 - INFO - 12 résultats ajoutés (total : 969)
+2025-08-10 12:55:49,526 - INFO - Requête 35/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=34
+2025-08-10 12:55:49,647 - INFO - 11 résultats ajoutés (total : 980)
+2025-08-10 12:55:49,647 - INFO - Requête 36/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=35
+2025-08-10 12:55:49,774 - INFO - 10 résultats ajoutés (total : 990)
+2025-08-10 12:55:49,775 - INFO - Requête 37/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=36
+2025-08-10 12:55:49,890 - INFO - 9 résultats ajoutés (total : 999)
+2025-08-10 12:55:49,890 - INFO - Requête 38/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=37
+2025-08-10 12:55:50,009 - INFO - 8 résultats ajoutés (total : 1007)
+2025-08-10 12:55:50,009 - INFO - Requête 39/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=38
+2025-08-10 12:55:50,161 - INFO - 7 résultats ajoutés (total : 1014)
+2025-08-10 12:55:50,162 - INFO - Requête 40/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=39
+2025-08-10 12:55:50,330 - INFO - 6 résultats ajoutés (total : 1020)
+2025-08-10 12:55:50,330 - INFO - Requête 41/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=40
+2025-08-10 12:55:52,004 - INFO - 5 résultats ajoutés (total : 1025)
+2025-08-10 12:55:52,004 - INFO - Requête 42/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=41
+2025-08-10 12:55:52,121 - INFO - 4 résultats ajoutés (total : 1029)
+2025-08-10 12:55:52,121 - INFO - Requête 43/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=42
+2025-08-10 12:55:52,255 - INFO - 3 résultats ajoutés (total : 1032)
+2025-08-10 12:55:52,255 - INFO - Requête 44/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=43
+2025-08-10 12:55:52,391 - INFO - 2 résultats ajoutés (total : 1034)
+2025-08-10 12:55:52,392 - INFO - Requête 45/45 : https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records?where=startat%3C=now()%20AND%20endat%3E=now()&limit=100&offset=44
+2025-08-10 12:55:52,976 - INFO - 1 résultats ajoutés (total : 1035)
+2025-08-10 12:55:53,071 - INFO - Toutes les données ont été enregistrées dans /usr/ELT_Travaux_Angers/data/data.csv

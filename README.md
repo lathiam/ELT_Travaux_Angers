@@ -166,8 +166,4 @@ cd dbt
 dbt test
 ```
 
-## 📝 Documentation
 
-- [Documentation dbt](./dbt/docs)
-- [Schéma des données](./dbt/models/schema.yml)
-- [Analyses disponibles](./dbt/analyses)
