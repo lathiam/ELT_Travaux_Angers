@@ -1,0 +1,78 @@
+version: 2
+
+sources:
+  - name: travaux_angers
+    database: my-project-travaux-angers
+    schema: travaux_angers
+    tables:
+      - name: travaux_angers
+        description: "Table source des travaux d'Angers"
+
+models:
+  - name: dim_travaux_details
+    schema: gold
+    description: "Table dimensionnelle contenant les détails de chaque travaux"
+    columns:
+      - name: id
+        description: "Identifiant unique du chantier"
+        tests:
+          - unique
+          - not_null
+      - name: titre
+        description: "Titre du chantier"
+        tests:
+          - not_null
+      - name: date_debut
+        description: "Date de début des travaux"
+        tests:
+          - not_null
+      - name: date_fin
+        description: "Date de fin prévue des travaux"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "date_fin >= date_debut"
+      - name: duree_jours
+        description: "Durée des travaux en jours"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "duree_jours >= 0"
+      - name: impact_trafic
+        description: "Niveau d'impact sur le trafic (FORT/MOYEN/FAIBLE)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['FORT', 'MOYEN', 'FAIBLE']
+      - name: position
+        description: "Position géographique du chantier"
+        tests:
+          - not_null
+
+  - name: fct_travaux_stats
+    schema: gold
+    description: "Table de faits contenant les statistiques des travaux"
+    columns:
+      - name: type_travaux
+        description: "Type de travaux"
+        tests:
+          - not_null
+      - name: niveau_impact
+        description: "Niveau d'impact"
+        tests:
+          - not_null
+      - name: mois
+        description: "Mois des travaux"
+        tests:
+          - not_null
+      - name: nombre_travaux
+        description: "Nombre total de travaux"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "nombre_travaux > 0"
+      - name: ratio_actif
+        description: "Ratio des travaux actifs"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "ratio_actif BETWEEN 0 AND 1"

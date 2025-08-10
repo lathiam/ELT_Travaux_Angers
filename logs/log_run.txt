@@ -1,0 +1,472 @@
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+Erreur lors de l'exécution du script : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Erreur détaillée : Command '['/usr/bin/python3', 'load.py']' returned non-zero exit status 1.
+Installation des dépendances...
+Dépendances installées avec succès
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+load.py terminé
+ETL terminé avec succès.
+Installation des dépendances...
+Erreur lors de l'installation des dépendances : Command '['/usr/bin/python3', '-m', 'pip', 'install', '-r', 'requirements.txt', '--break-system-packages']' returned non-zero exit status 1.
+Installation des dépendances...
+Erreur lors de l'installation des dépendances : Command '['/usr/bin/python3', '-m', 'pip', 'install', '-r', 'requirements.txt', '--break-system-packages']' returned non-zero exit status 1.
+Installation des dépendances...
+Dépendances installées avec succès
+Début de l'ETL
+Exécution de extract.py...
+extract.py terminé
+Exécution de load.py...
+load.py terminé
+ETL terminé avec succès.
+Installation des dépendances...
+Erreur lors de l'installation des dépendances : Command '['/usr/bin/python3', '-m', 'pip', 'install', '-r', 'requirements.txt', '--break-system-packages']' returned non-zero exit status 1.
+2025-08-10 01:20:07 - Début de l'ETL
+2025-08-10 01:20:07 - Exécution de extract.py...
+2025-08-10 01:20:19 - extract.py terminé
+2025-08-10 01:20:19 - Exécution de load.py...
+2025-08-10 01:20:35 - Erreur lors de l'exécution : Command '['/usr/ELT_Travaux_Angers/.env/bin/python3', 'load.py']' returned non-zero exit status 1.
+2025-08-10 01:36:37 - Début de l'ETL
+2025-08-10 01:36:37 - Exécution de extract.py...
+2025-08-10 01:36:46 - extract.py terminé
+2025-08-10 01:36:46 - Exécution de load.py...
+2025-08-10 01:36:47 - Erreur lors de l'exécution : Command '['/usr/ELT_Travaux_Angers/.env/bin/python3', 'load.py']' returned non-zero exit status 1.
+2025-08-10 01:43:22 - Début de l'ETL
+2025-08-10 01:43:22 - Exécution de extract.py...
+2025-08-10 01:43:32 - extract.py terminé
+2025-08-10 01:43:32 - Exécution de load.py...
+2025-08-10 01:43:38 - Erreur lors de l'exécution : Command '['/root/.pyenv/versions/3.12.6/bin/python3', 'load.py']' returned non-zero exit status 1.
+2025-08-10 01:46:58 - Début de l'ETL
+2025-08-10 01:46:58 - Exécution de extract.py...
+2025-08-10 01:47:07 - extract.py terminé
+2025-08-10 01:47:07 - Exécution de load.py...
+2025-08-10 01:47:10 - Erreur lors de l'exécution : Command '['/root/.pyenv/versions/3.12.6/bin/python3', 'load.py']' returned non-zero exit status 1.
+2025-08-10 01:54:36 - Début de l'ETL
+2025-08-10 01:54:36 - Exécution de extract.py...
+2025-08-10 01:54:44 - extract.py terminé
+2025-08-10 01:54:44 - Exécution de load.py...
+2025-08-10 01:54:53 - load.py terminé
+2025-08-10 01:54:53 - Début des transformations DBT...
+2025-08-10 01:55:04 - Commande DBT réussie: dbt deps
+2025-08-10 01:56:02 - Erreur lors de l'exécution de la commande DBT : Command '['dbt', 'run']' returned non-zero exit status 1.
+2025-08-10 01:56:02 - Sortie standard : [0m23:55:10  Running with dbt=1.10.7
+[0m23:55:29  Registered adapter: bigquery=1.10.1
+[0m23:55:32  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m23:55:32  
+[0m23:55:32  Concurrency: 1 threads (target='dev')
+[0m23:55:32  
+[0m23:55:36  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m23:55:38  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 2.23s]
+[0m23:55:38  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m23:55:40  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.26s]
+[0m23:55:40  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m23:55:40  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:09534762-6cbc-4f75-9e07-309e07db83ef&page=queryresults
+[0m23:55:40  3 of 9 ERROR creating sql view model travaux_angers.check_source ............... [[31mERROR[0m in 0.60s]
+[0m23:55:40  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m23:55:43  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:bff18d19-8e1a-45cd-be66-0dbb37c45795&page=queryresults
+[0m23:55:43  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 2.32s]
+[0m23:55:43  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m23:55:44  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 1.15s]
+[0m23:55:44  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m23:55:47  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (12.2k rows, 3.8 MiB processed)[0m in 3.28s]
+[0m23:55:47  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m23:55:51  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (12.2k rows, 3.5 MiB processed)[0m in 4.13s]
+[0m23:55:51  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m23:55:55  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 557.7 KiB processed)[0m in 3.55s]
+[0m23:55:55  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m23:55:58  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 557.7 KiB processed)[0m in 3.58s]
+[0m23:55:58  
+[0m23:55:58  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 26.65 seconds (26.65s).
+[0m23:55:59  
+[0m23:55:59  [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m23:55:59  
+[0m23:55:59  [31mFailure in model check_source (models/check_source.sql)[0m
+[0m23:55:59    Database Error in model check_source (models/check_source.sql)
+  Invalid project ID 'my-project-travaux-angers.travaux_angers'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+  compiled code at target/run/travaux_angers/models/check_source.sql
+[0m23:55:59  
+[0m23:55:59    compiled code at target/compiled/travaux_angers/models/check_source.sql
+[0m23:55:59  
+[0m23:55:59  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m23:55:59    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  Unrecognized name: coordinate_x at [30:9]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m23:55:59  
+[0m23:55:59    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m23:55:59  
+[0m23:55:59  Done. PASS=7 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=9
+
+2025-08-10 01:56:02 - Erreur lors de l'exécution : Échec de la commande DBT : dbt run
+2025-08-10 02:06:42 - Début de l'ETL
+2025-08-10 02:06:42 - Exécution de extract.py...
+2025-08-10 02:06:56 - extract.py terminé
+2025-08-10 02:06:56 - Exécution de load.py...
+2025-08-10 02:07:07 - load.py terminé
+2025-08-10 02:07:07 - Début des transformations DBT...
+2025-08-10 02:07:14 - Commande DBT réussie: dbt deps
+2025-08-10 02:07:56 - Erreur lors de l'exécution de la commande DBT : Command '['dbt', 'run']' returned non-zero exit status 1.
+2025-08-10 02:07:56 - Sortie standard : [0m00:07:17  Running with dbt=1.10.7
+[0m00:07:29  Registered adapter: bigquery=1.10.1
+[0m00:07:30  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m00:07:30  
+[0m00:07:30  Concurrency: 1 threads (target='dev')
+[0m00:07:30  
+[0m00:07:34  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m00:07:35  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[0m00:07:35  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m00:07:36  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.14s]
+[0m00:07:36  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m00:07:37  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:d6f9d829-08d4-4220-986c-34924a49fbff&page=queryresults
+[0m00:07:37  3 of 9 ERROR creating sql view model travaux_angers.check_source ............... [[31mERROR[0m in 0.48s]
+[0m00:07:37  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m00:07:38  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:96ecbe3f-6e87-487c-8b96-c73d7b308025&page=queryresults
+[0m00:07:38  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 1.56s]
+[0m00:07:38  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m00:07:40  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 1.12s]
+[0m00:07:40  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m00:07:43  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (13.1k rows, 4.2 MiB processed)[0m in 3.34s]
+[0m00:07:43  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m00:07:46  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (13.1k rows, 3.8 MiB processed)[0m in 3.38s]
+[0m00:07:46  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m00:07:50  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 603.1 KiB processed)[0m in 3.83s]
+[0m00:07:50  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m00:07:54  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 603.1 KiB processed)[0m in 3.69s]
+[0m00:07:54  
+[0m00:07:54  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 23.69 seconds (23.69s).
+[0m00:07:54  
+[0m00:07:54  [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m00:07:54  
+[0m00:07:54  [31mFailure in model check_source (models/check_source.sql)[0m
+[0m00:07:54    Database Error in model check_source (models/check_source.sql)
+  Invalid project ID 'my-project-travaux-angers.travaux_angers'. Project IDs must contain 6-63 lowercase letters, digits, or dashes. Some project IDs also include domain name separated by a colon. IDs must start with a letter and may not end with a dash.
+  compiled code at target/run/travaux_angers/models/check_source.sql
+[0m00:07:54  
+[0m00:07:54    compiled code at target/compiled/travaux_angers/models/check_source.sql
+[0m00:07:54  
+[0m00:07:54  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m00:07:54    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  Unrecognized name: coordinate_x at [30:9]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:07:54  
+[0m00:07:54    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:07:54  
+[0m00:07:54  Done. PASS=7 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=9
+
+2025-08-10 02:07:56 - Erreur lors de l'exécution : Échec de la commande DBT : dbt run
+2025-08-10 02:26:19 - Début de l'ETL
+2025-08-10 02:26:19 - Exécution de extract.py...
+2025-08-10 02:26:30 - extract.py terminé
+2025-08-10 02:26:30 - Exécution de load.py...
+2025-08-10 02:26:54 - load.py terminé
+2025-08-10 02:26:54 - Début des transformations DBT...
+2025-08-10 02:27:45 - Erreur lors de l'exécution : Échec de la commande DBT : Command '['dbt', 'run']' returned non-zero exit status 1.
+2025-08-10 02:30:17 - Début de l'ETL
+2025-08-10 02:30:17 - Exécution de extract.py...
+2025-08-10 02:30:30 - extract.py terminé
+2025-08-10 02:30:30 - Exécution de load.py...
+2025-08-10 02:30:36 - load.py terminé
+2025-08-10 02:30:36 - Début des transformations DBT...
+2025-08-10 02:31:14 - Erreur lors de l'exécution : Échec de la commande DBT : Erreur lors de l'exécution de la commande DBT : Command 'dbt run' returned non-zero exit status 1.
+2025-08-10 02:39:16 - Début de l'ETL
+2025-08-10 02:39:16 - Exécution de extract.py...
+2025-08-10 02:39:25 - extract.py terminé
+2025-08-10 02:39:25 - Exécution de load.py...
+2025-08-10 02:39:30 - load.py terminé
+2025-08-10 02:39:30 - Début des transformations DBT...
+2025-08-10 02:40:07 - Erreur lors de l'exécution : Échec de la commande DBT : Erreur lors de l'exécution de la commande DBT : Command 'dbt run' returned non-zero exit status 1.
+2025-08-10 02:42:35 - Début de l'ETL
+2025-08-10 02:42:35 - Exécution de extract.py...
+2025-08-10 02:42:41 - extract.py terminé
+2025-08-10 02:42:41 - Exécution de load.py...
+2025-08-10 02:42:46 - load.py terminé
+2025-08-10 02:42:46 - Début des transformations DBT...
+2025-08-10 02:43:19 - Erreur lors de l'exécution : Erreur lors de l'exécution de dbt run (code 1)
+Sortie:
+[0m00:42:51  Running with dbt=1.10.7
+[0m00:42:55  Registered adapter: bigquery=1.10.1
+[0m00:42:55  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m00:42:55  
+[0m00:42:55  Concurrency: 1 threads (target='dev')
+[0m00:42:55  
+[0m00:42:59  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m00:43:00  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.21s]
+[0m00:43:00  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m00:43:01  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.18s]
+[0m00:43:01  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m00:43:02  3 of 9 OK created sql view model travaux_angers.check_source ................... [[32mCREATE VIEW (0 processed)[0m in 1.34s]
+[0m00:43:03  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m00:43:04  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:5ebc6673-ff8e-46bd-8b74-b7e333a439a8&page=queryresults
+[0m00:43:04  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 1.43s]
+[0m00:43:04  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m00:43:05  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[0m00:43:05  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m00:43:09  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (17.1k rows, 5.4 MiB processed)[0m in 3.34s]
+[0m00:43:09  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m00:43:12  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (17.1k rows, 4.9 MiB processed)[0m in 3.21s]
+[0m00:43:12  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m00:43:15  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 784.9 KiB processed)[0m in 3.10s]
+[0m00:43:15  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m00:43:18  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 784.9 KiB processed)[0m in 2.73s]
+[0m00:43:18  
+[0m00:43:18  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 22.49 seconds (22.49s).
+[0m00:43:18  
+[0m00:43:18  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:43:18  
+[0m00:43:18  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m00:43:18    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  Unrecognized name: x at [30:9]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:43:18  
+[0m00:43:18    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:43:18  
+[0m00:43:18  Done. PASS=8 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=9
+
+2025-08-10 02:49:09 - Début de l'ETL
+2025-08-10 02:49:09 - Exécution de extract.py...
+2025-08-10 02:49:18 - extract.py terminé
+2025-08-10 02:49:18 - Exécution de load.py...
+2025-08-10 02:49:25 - load.py terminé
+2025-08-10 02:49:25 - Début des transformations DBT...
+2025-08-10 02:50:05 - Erreur lors de l'exécution : Erreur lors de l'exécution de dbt run (code 1)
+Sortie:
+[0m00:49:31  Running with dbt=1.10.7
+[0m00:49:40  Registered adapter: bigquery=1.10.1
+[0m00:49:41  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m00:49:41  
+[0m00:49:41  Concurrency: 1 threads (target='dev')
+[0m00:49:41  
+[0m00:49:44  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m00:49:46  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.67s]
+[0m00:49:46  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m00:49:47  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.08s]
+[0m00:49:47  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m00:49:48  3 of 9 OK created sql view model travaux_angers.check_source ................... [[32mCREATE VIEW (0 processed)[0m in 1.15s]
+[0m00:49:48  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m00:49:49  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:6f41eedc-5f89-4a2f-9e62-712b8480c603&page=queryresults
+[0m00:49:49  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 1.18s]
+[0m00:49:49  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m00:49:50  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 0.99s]
+[0m00:49:50  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m00:49:53  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (18.1k rows, 5.7 MiB processed)[0m in 3.22s]
+[0m00:49:53  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m00:49:56  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (18.1k rows, 5.2 MiB processed)[0m in 2.91s]
+[0m00:49:56  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m00:50:00  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 830.3 KiB processed)[0m in 3.99s]
+[0m00:50:00  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m00:50:03  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 830.3 KiB processed)[0m in 2.96s]
+[0m00:50:03  
+[0m00:50:03  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 22.82 seconds (22.82s).
+[0m00:50:03  
+[0m00:50:03  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:50:03  
+[0m00:50:03  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m00:50:03    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  Unrecognized name: position; Did you mean location? at [30:14]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:50:03  
+[0m00:50:03    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:50:03  
+[0m00:50:03  Done. PASS=8 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=9
+
+2025-08-10 02:52:50 - Début de l'ETL
+2025-08-10 02:52:50 - Exécution de extract.py...
+2025-08-10 02:52:56 - extract.py terminé
+2025-08-10 02:52:56 - Exécution de load.py...
+2025-08-10 02:53:02 - load.py terminé
+2025-08-10 02:53:02 - Début des transformations DBT...
+2025-08-10 02:53:36 - Erreur lors de l'exécution : Erreur lors de l'exécution de dbt run (code 1)
+Sortie:
+[0m00:53:07  Running with dbt=1.10.7
+[0m00:53:11  Registered adapter: bigquery=1.10.1
+[0m00:53:12  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m00:53:12  
+[0m00:53:12  Concurrency: 1 threads (target='dev')
+[0m00:53:12  
+[0m00:53:15  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m00:53:17  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.44s]
+[0m00:53:17  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m00:53:18  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.07s]
+[0m00:53:18  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m00:53:19  3 of 9 OK created sql view model travaux_angers.check_source ................... [[32mCREATE VIEW (0 processed)[0m in 1.07s]
+[0m00:53:19  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m00:53:20  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:518db53a-c9d3-4fc6-a171-9b886d14138a&page=queryresults
+[0m00:53:20  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 1.30s]
+[0m00:53:20  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m00:53:21  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 1.07s]
+[0m00:53:21  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m00:53:24  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (19.1k rows, 6.0 MiB processed)[0m in 2.90s]
+[0m00:53:24  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m00:53:27  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (19.1k rows, 5.5 MiB processed)[0m in 3.06s]
+[0m00:53:27  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m00:53:30  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 875.7 KiB processed)[0m in 3.04s]
+[0m00:53:30  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m00:53:34  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 875.7 KiB processed)[0m in 3.39s]
+[0m00:53:34  
+[0m00:53:34  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 21.95 seconds (21.95s).
+[0m00:53:34  
+[0m00:53:34  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:53:34  
+[0m00:53:34  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m00:53:34    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  No matching signature for function ST_X
+    Argument types: STRING
+    Signature: ST_X(GEOGRAPHY)
+      Argument 1: Unable to coerce type STRING to expected type GEOGRAPHY at [30:9]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:53:34  
+[0m00:53:34    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:53:34  
+[0m00:53:34  Done. PASS=8 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=9
+
+2025-08-10 02:58:53 - Début de l'ETL
+2025-08-10 02:58:53 - Exécution de extract.py...
+2025-08-10 02:59:01 - extract.py terminé
+2025-08-10 02:59:01 - Exécution de load.py...
+2025-08-10 02:59:08 - load.py terminé
+2025-08-10 02:59:08 - Début des transformations DBT...
+2025-08-10 02:59:46 - Erreur lors de l'exécution : Erreur lors de l'exécution de dbt run (code 1)
+Sortie:
+[0m00:59:14  Running with dbt=1.10.7
+[0m00:59:21  Registered adapter: bigquery=1.10.1
+[0m00:59:22  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m00:59:22  
+[0m00:59:22  Concurrency: 1 threads (target='dev')
+[0m00:59:22  
+[0m00:59:25  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m00:59:27  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.24s]
+[0m00:59:27  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m00:59:28  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.18s]
+[0m00:59:28  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m00:59:29  3 of 9 OK created sql view model travaux_angers.check_source ................... [[32mCREATE VIEW (0 processed)[0m in 1.49s]
+[0m00:59:29  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m00:59:31  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:a69aa232-a26f-4691-8396-af89ae940990&page=queryresults
+[0m00:59:31  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 1.28s]
+[0m00:59:31  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m00:59:32  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 0.98s]
+[0m00:59:32  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m00:59:35  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (20.1k rows, 6.3 MiB processed)[0m in 3.06s]
+[0m00:59:35  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m00:59:38  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (20.1k rows, 5.8 MiB processed)[0m in 3.16s]
+[0m00:59:38  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m00:59:41  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 921.2 KiB processed)[0m in 3.27s]
+[0m00:59:41  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m00:59:44  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 921.2 KiB processed)[0m in 3.32s]
+[0m00:59:45  
+[0m00:59:45  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 22.47 seconds (22.47s).
+[0m00:59:45  
+[0m00:59:45  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m00:59:45  
+[0m00:59:45  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m00:59:45    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  No matching signature for function ST_X
+    Argument types: STRING
+    Signature: ST_X(GEOGRAPHY)
+      Argument 1: Unable to coerce type STRING to expected type GEOGRAPHY at [30:9]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:59:45  
+[0m00:59:45    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m00:59:45  
+[0m00:59:45  Done. PASS=8 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=9
+
+2025-08-10 03:00:34 - Début de l'ETL
+2025-08-10 03:00:34 - Exécution de extract.py...
+2025-08-10 03:00:48 - extract.py terminé
+2025-08-10 03:00:48 - Exécution de load.py...
+2025-08-10 03:00:53 - load.py terminé
+2025-08-10 03:00:53 - Début des transformations DBT...
+2025-08-10 03:01:27 - Erreur lors de l'exécution : Erreur lors de l'exécution de dbt run (code 1)
+Sortie:
+[0m01:00:58  Running with dbt=1.10.7
+[0m01:01:02  Registered adapter: bigquery=1.10.1
+[0m01:01:02  Found 9 models, 1 analysis, 17 data tests, 1 source, 610 macros
+[0m01:01:02  
+[0m01:01:02  Concurrency: 1 threads (target='dev')
+[0m01:01:02  
+[0m01:01:06  1 of 9 START sql view model travaux_angers.analyse_types ....................... [RUN]
+[0m01:01:07  1 of 9 OK created sql view model travaux_angers.analyse_types .................. [[32mCREATE VIEW (0 processed)[0m in 1.39s]
+[0m01:01:07  2 of 9 START sql view model travaux_angers.check_columns ....................... [RUN]
+[0m01:01:08  2 of 9 OK created sql view model travaux_angers.check_columns .................. [[32mCREATE VIEW (0 processed)[0m in 1.33s]
+[0m01:01:08  3 of 9 START sql view model travaux_angers.check_source ........................ [RUN]
+[0m01:01:09  3 of 9 OK created sql view model travaux_angers.check_source ................... [[32mCREATE VIEW (0 processed)[0m in 1.04s]
+[0m01:01:09  4 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_monthly ..... [RUN]
+[0m01:01:11  BigQuery adapter: https://console.cloud.google.com/bigquery?project=my-project-travaux-angers&j=bq:US:6460b245-359a-48a7-86bb-2b398c3071ef&page=queryresults
+[0m01:01:11  4 of 9 ERROR creating sql table model travaux_angers_gold.fct_travaux_stats_monthly  [[31mERROR[0m in 1.16s]
+[0m01:01:11  5 of 9 START sql view model travaux_angers_bronze.src_travaux_angers ........... [RUN]
+[0m01:01:12  5 of 9 OK created sql view model travaux_angers_bronze.src_travaux_angers ...... [[32mCREATE VIEW (0 processed)[0m in 1.25s]
+[0m01:01:12  6 of 9 START sql table model travaux_angers_silver.stg_travaux_angers .......... [RUN]
+[0m01:01:15  6 of 9 OK created sql table model travaux_angers_silver.stg_travaux_angers ..... [[32mCREATE TABLE (21.1k rows, 6.7 MiB processed)[0m in 3.66s]
+[0m01:01:15  7 of 9 START sql table model travaux_angers_gold.dim_travaux_details ........... [RUN]
+[0m01:01:19  7 of 9 OK created sql table model travaux_angers_gold.dim_travaux_details ...... [[32mCREATE TABLE (21.1k rows, 6.1 MiB processed)[0m in 3.14s]
+[0m01:01:19  8 of 9 START sql table model travaux_angers_gold.fct_travaux_stats ............. [RUN]
+[0m01:01:22  8 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats ........ [[32mCREATE TABLE (31.0 rows, 966.6 KiB processed)[0m in 3.38s]
+[0m01:01:22  9 of 9 START sql table model travaux_angers_gold.fct_travaux_stats_daily ....... [RUN]
+[0m01:01:25  9 of 9 OK created sql table model travaux_angers_gold.fct_travaux_stats_daily .. [[32mCREATE TABLE (31.0 rows, 966.6 KiB processed)[0m in 3.40s]
+[0m01:01:25  
+[0m01:01:25  Finished running 5 table models, 4 view models in 0 hours 0 minutes and 23.36 seconds (23.36s).
+[0m01:01:26  
+[0m01:01:26  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m01:01:26  
+[0m01:01:26  [31mFailure in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)[0m
+[0m01:01:26    Database Error in model fct_travaux_stats_monthly (models/gold/fct_travaux_stats_monthly.sql)
+  No matching signature for function ST_X
+    Argument types: STRING
+    Signature: ST_X(GEOGRAPHY)
+      Argument 1: Unable to coerce type STRING to expected type GEOGRAPHY at [30:9]
+  compiled code at target/run/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m01:01:26  
+[0m01:01:26    compiled code at target/compiled/travaux_angers/models/gold/fct_travaux_stats_monthly.sql
+[0m01:01:26  
+[0m01:01:26  Done. PASS=8 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=9
+

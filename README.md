@@ -1,67 +1,173 @@
-# ELT Travaux Angers
+# 🚧 Travaux Angers ELT Pipeline
 
-## Description du Projet
-Ce projet met en place un système ELT (Extract, Load, Transform) pour suivre en temps réel les travaux dans la ville d'Angers. Il permet de collecter, stocker et visualiser les informations concernant les travaux en cours et passés dans la ville.
+## 🎯 Vue d'ensemble
 
-## Objectifs
-- Suivre en temps réel les travaux dans la ville d'Angers
-- Visualiser les travaux sur une carte interactive
-- Analyser la durée et l'impact des travaux
-- Informer sur les déviations et l'état du trafic
+Ce pipeline ELT (Extract, Load, Transform) modernise l'analyse des travaux publics de la ville d'Angers. Contrairement à une approche ETL traditionnelle, les transformations sont effectuées directement dans le data warehouse (BigQuery) via dbt, offrant ainsi plus de flexibilité et de puissance pour l'analyse des données.
 
-## Structure du Projet
+### Pourquoi ELT ?
+- **Transformation dans le warehouse** : Utilisation de la puissance de calcul de BigQuery
+- **Flexibilité accrue** : Modification des transformations sans recharger les données
+- **Traçabilité** : Historique complet des données brutes
+- **Reproductibilité** : Transformations versionnées avec dbt
+
+### Objectifs du Projet
+- Suivre en temps réel l'évolution des chantiers
+- Analyser l'impact des travaux sur différentes zones
+- Identifier les tendances et patterns des chantiers
+- Optimiser la planification des futurs travaux
+- Améliorer la communication auprès des citoyens
+
+### Analyses Clés
+1. **Distribution Géographique**
+   - Carte de chaleur des zones de travaux
+   - Identification des quartiers les plus impactés
+   - Analyse de la concentration des chantiers
+
+2. **Analyse Temporelle**
+   - Durée moyenne des chantiers par type
+   - Saisonnalité des travaux
+   - Prédiction des périodes de forte activité
+
+3. **Impact et Performance**
+   - Suivi du respect des délais
+   - Analyse des retards et leurs causes
+   - Évaluation de l'efficacité des travaux
+
+4. **Indicateurs Stratégiques**
+   - Taux d'occupation de la voirie
+   - Densité des travaux par zone
+   - Impact sur la circulation
+
+## 🏗️ Architecture
+
+```mermaid
+graph LR
+    A[API Open Data] -->|extract.py| B[CSV]
+    B -->|load.py| C[(BigQuery)]
+    C -->|dbt| D[Data Warehouse]
+    D -->|Models| E[Analytics]
+
+    style A fill:#85C1E9
+    style B fill:#F8C471
+    style C fill:#76D7C4
+    style D fill:#F1948A
+    style E fill:#BB8FCE
 ```
-├── extract.py           # Script d'extraction des données
-├── load.py             # Script de chargement des données
-├── requirements.txt     # Dépendances du projet
-├── credentials/        
-│   └── mon_compte_de_service_travaux_angers.json  # Identifiants de service
-├── data/
-│   └── data.csv        # Données extraites
-└── logs/
-    ├── log_extract.txt # Logs d'extraction
-    ├── log_load.txt    # Logs de chargement
+
+## 🛠️ Technologies Utilisées
+
+- **Python** : Scripts d'extraction et chargement
+- **Google BigQuery** : Data Warehouse
+- **dbt** : Transformation et modélisation des données
+- **Git & GitHub** : Versionning et partage de code
+- **Cron** : Orchestration des tâches
+
+## 📊 Structure des Données
+
+### Pipeline de Données
+1. **Extraction (E)**
+   - Collecte via l'API Open Data d'Angers
+   - Stockage au format CSV
+
+2. **Chargement (L)**
+   - Import dans BigQuery
+   - Historisation des données
+
+3. **Transformation (T)**
+   - Modélisation en couches (Bronze/Silver/Gold)
+   - Calculs des métriques
+   - Agrégations temporelles
+
+### Modèles dbt
+
+#### Bronze (Raw)
+- `src_travaux_angers` : Données brutes historisées
+  - Coordonnées géographiques
+  - Dates de début/fin
+  - Types de travaux
+  - Descriptions et impacts
+
+#### Silver (Staging)
+- `stg_travaux_angers` : Données standardisées
+  - Normalisation des types
+  - Calcul des durées
+  - Enrichissement géographique
+
+#### Gold (Business)
+- `dim_travaux_details` : Détails enrichis des chantiers
+  - Classification des impacts
+  - Métriques de durée
+  - Informations géographiques
+
+- `fct_travaux_stats` : KPIs globaux
+  - Nombre de chantiers actifs
+  - Taux d'occupation
+  - Métriques d'impact
+
+- `fct_travaux_stats_daily` : Analyses journalières
+  - Évolution quotidienne
+  - Nouveaux chantiers
+  - Taux de complétion
+
+- `fct_travaux_stats_monthly` : Synthèse mensuelle
+  - Tendances mensuelles
+  - Comparaisons année/année
+  - Prévisions
+
+## 🚀 Installation
+
+1. Cloner le repository
+```bash
+git clone https://github.com/votre-nom/travaux-angers-etl.git
+cd travaux-angers-etl
 ```
 
-## Fonctionnalités Principales
-- **Extraction des données** : Récupération automatique des informations sur les travaux
-- **Stockage** : Sauvegarde des données dans un format structuré
-- **Visualisation** : Tableau de bord interactif présentant :
-  - Localisation des travaux sur une carte
-  - Dates de début et de fin des travaux
-  - Durée estimée des travaux
-  - Information sur les déviations
-  - État du trafic
-  - Historique des travaux passés
+2. Installer les dépendances
+```bash
+pip install -r requirements.txt
+```
 
-## Données Collectées
-- Emplacement des travaux
-- Dates (début et fin)
-- Durée prévue
-- Présence de déviations
-- Impact sur le trafic
-- État d'avancement
-- Rue(s) concernée(s)
+3. Installer les packages dbt
+```bash
+cd dbt
+dbt deps
+```
 
-## Configuration
-Le projet nécessite des identifiants de service stockés dans le dossier `credentials/` pour accéder aux données de la ville d'Angers.
+## 📈 Usage
 
-## Utilisation
-1. Configurer les identifiants dans le dossier `credentials/`
-2. Installer les dépendances : `pip install -r requirements.txt`
-3. Lancer l'extraction : `python extract.py`
-4. Lancer le chargement : `python load.py`
+### Pipeline ELT Complet
+```bash
+python run_etl.py
+```
 
-## Tableau de Bord
-Le tableau de bord permet de visualiser en temps réel :
-- La carte interactive des travaux
-- Les statistiques sur les travaux en cours
-- Les prévisions de durée
-- Les zones impactées
-- Les itinéraires alternatifs
+### Commandes Individuelles
 
-## Logs
-Les logs sont stockés dans le dossier `logs/` et permettent de suivre :
-- Les extractions de données
-- Les chargements
-- Les erreurs éventuelles
+#### Extraction des données
+```bash
+python extract.py
+```
+
+#### Chargement dans BigQuery
+```bash
+python load.py
+```
+
+#### Transformations dbt
+```bash
+cd dbt
+dbt run
+```
+
+## 📋 Tests
+
+```bash
+# Tests dbt
+cd dbt
+dbt test
+```
+
+## 📝 Documentation
+
+- [Documentation dbt](./dbt/docs)
+- [Schéma des données](./dbt/models/schema.yml)
+- [Analyses disponibles](./dbt/analyses)

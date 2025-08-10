@@ -9,6 +9,7 @@ venv/
 ENV/
 .venv/
 
+
 # Fichiers de logs
 #*.log
 
