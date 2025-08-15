@@ -5,24 +5,31 @@
     on_schema_change = "sync_all_columns"
 ) }}
 
--- 1) Source brute (sélection explicite + horodatage de chargement)
+-- 1) Source brute
 WITH src AS (
   SELECT
-    CAST(id         AS STRING)  AS id_raw,
-    CAST(type       AS STRING)  AS type_raw,
-    CAST(title      AS STRING)  AS title_raw,
-    CAST(description AS STRING) AS description_raw,
-    CAST(address    AS STRING)  AS address_raw,
-    -- startat / endat peuvent être TIMESTAMP/DATETIME/STRING côté source
-    -- SAFE_CAST évite de planter si le format varie.
-    SAFE_CAST(startat AS DATETIME)  AS startat_raw,
-    SAFE_CAST(endat   AS DATETIME)  AS endat_raw,
-    CAST(location   AS STRING)      AS location_raw,
+    CAST(id           AS STRING)  AS id_raw,
+    CAST(type         AS STRING)  AS type_raw,
+    CAST(title        AS STRING)  AS title_raw,
+    CAST(description  AS STRING)  AS description_raw,
+    CAST(address      AS STRING)  AS address_raw,
+
+    startat                          AS startat_raw,
+    endat                            AS endat_raw,
+
+    CAST(location     AS STRING)  AS location_raw,
+
+    -- Colonnes optionnelles absentes → NULL (pour compat. aval)
+    CAST(NULL AS STRING) AS traffic_raw,
+    CAST(NULL AS BOOL)   AS deviated_raw,
+    CAST(NULL AS INT64)  AS slow_raw,
+    CAST(NULL AS INT64)  AS normal_raw,
+
     CURRENT_TIMESTAMP()             AS _loaded_at
   FROM {{ source('travaux_angers', 'travaux_angers') }}
 ),
 
--- 2) Nettoyage texte minimal (trim, normalisation basique)
+-- 2) Nettoyage texte
 txt AS (
   SELECT
     TRIM(id_raw)          AS id_clean,
@@ -37,28 +44,62 @@ txt AS (
   FROM src
 ),
 
--- 3) Typage fort + dérivées date
+-- 3) Typage fort (dates) – sans JSON_TYPE, TZ figée
 typed AS (
   SELECT
     id_clean                                   AS id,
     type_clean                                 AS type,
-    UPPER(type_clean)                          AS type_norm,             -- normalisation simple
+    UPPER(type_clean)                          AS type_norm,
     title_clean                                AS title,
     description_clean                          AS description,
     address_clean                              AS address,
 
-    -- DATETIME -> DATE
-    startat_raw                                AS start_at,
-    endat_raw                                  AS end_at,
-    CAST(startat_raw AS DATE)                  AS start_date,
-    CAST(endat_raw   AS DATE)                  AS end_date,
+    COALESCE(
+      SAFE_CAST(startat_raw AS TIMESTAMP),
+      (CASE WHEN SAFE_CAST(startat_raw AS DATETIME) IS NOT NULL
+            THEN TIMESTAMP(SAFE_CAST(startat_raw AS DATETIME), 'Europe/Paris') END),
+      PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', CAST(startat_raw AS STRING)),
+      PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%E*S',  CAST(startat_raw AS STRING)),
+      PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*S',  CAST(startat_raw AS STRING))
+    ) AS start_at,
+
+    COALESCE(
+      SAFE_CAST(endat_raw AS TIMESTAMP),
+      (CASE WHEN SAFE_CAST(endat_raw AS DATETIME) IS NOT NULL
+            THEN TIMESTAMP(SAFE_CAST(endat_raw AS DATETIME), 'Europe/Paris') END),
+      PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', CAST(endat_raw AS STRING)),
+      PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%E*S',  CAST(endat_raw AS STRING)),
+      PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*S',  CAST(endat_raw AS STRING))
+    ) AS end_at,
+
+    DATE(
+      COALESCE(
+        SAFE_CAST(startat_raw AS TIMESTAMP),
+        (CASE WHEN SAFE_CAST(startat_raw AS DATETIME) IS NOT NULL
+              THEN TIMESTAMP(SAFE_CAST(startat_raw AS DATETIME), 'Europe/Paris') END),
+        PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', CAST(startat_raw AS STRING)),
+        PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%E*S',  CAST(startat_raw AS STRING)),
+        PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*S',  CAST(startat_raw AS STRING))
+      )
+    ) AS start_date,
+
+    DATE(
+      COALESCE(
+        SAFE_CAST(endat_raw AS TIMESTAMP),
+        (CASE WHEN SAFE_CAST(endat_raw AS DATETIME) IS NOT NULL
+              THEN TIMESTAMP(SAFE_CAST(endat_raw AS DATETIME), 'Europe/Paris') END),
+        PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', CAST(endat_raw AS STRING)),
+        PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%E*S',  CAST(endat_raw AS STRING)),
+        PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*S',  CAST(endat_raw AS STRING))
+      )
+    ) AS end_date,
 
     location_clean                             AS location_str,
     _loaded_at
   FROM txt
 ),
 
--- 4) Normalisation géo robuste (GeoJSON Feature/FeatureCollection/Geometry, WKT, "lon,lat")
+-- 4) Géométrie
 geo AS (
   SELECT
     t.*,
@@ -82,8 +123,7 @@ geo AS (
   FROM typed t
 ),
 
--- 5) Dédoublonnage (pas de DISTINCT sur GEOGRAPHY) :
--- on considère un doublon si tous ces champs matchent, géométrie incluse via WKT
+-- 5) Dédoublonnage
 dedup AS (
   SELECT
     *,
@@ -97,7 +137,7 @@ dedup AS (
   FROM geo
 )
 
--- 6) Sortie finale silver (Lisible + stable + prête pour gold)
+-- 6) Sortie finale
 SELECT
   id,
   type,
@@ -106,18 +146,15 @@ SELECT
   description,
   address,
 
-  -- Dates typées
   start_at,
   end_at,
   start_date,
   end_date,
 
-  -- GEO
-  position,                          -- GEOGRAPHY (pour downstream)
+  position,
   ST_ASTEXT(position) AS position_wkt,
   CASE WHEN position IS NOT NULL THEN 'Oui' ELSE 'Non' END AS a_geometrie,
 
-  -- Qualité / Meta
   location_str,
   _loaded_at,
   CURRENT_TIMESTAMP() AS _staged_at

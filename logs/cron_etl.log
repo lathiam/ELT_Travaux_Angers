@@ -2560,3 +2560,10 @@ Update your versions in packages.yml, then run dbt deps
 
 2025-08-10 14:51:19,952 INFO:Transformations DBT terminées avec succès
 2025-08-10 14:51:19,953 INFO:ETL terminé avec succès
+2025-08-10 18:00:05,850 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-11 18:00:00,997 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-12 00:00:01,694 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-12 12:00:03,531 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-12 18:00:01,869 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-13 12:00:05,550 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-15 12:00:02,956 ERROR:Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.

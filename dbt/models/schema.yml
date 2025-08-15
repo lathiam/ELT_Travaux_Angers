@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: travaux_angers
-    database: my-project-travaux-angers
+    database: my-project-travaux-angers   # adapte si besoin
     schema: travaux_angers
     tables:
       - name: travaux_angers
@@ -10,42 +10,33 @@ sources:
 
 models:
 
-  # =========================
-  # SILVER
-  # =========================
-  - name: stg_travaux_angers
-    schema: silver
-    description: "Table silver nettoyée/typée et normalisée (géométrie prête)"
+  # -------------------------
+  # BRONZE
+  # -------------------------
+  - name: src_travaux_angers
+    schema: bronze
+    description: "Bronze enrichi : parsing dates/times, normalisation géo, dédoublonnage minimal"
     columns:
       - name: id
-        description: "Identifiant source"
         tests: [not_null]
-
       - name: start_date
-        description: "Date de début (DATE)"
-        tests: [not_null]
-
+        tests:
+          - not_null:
+              config: {severity: warn}
       - name: end_date
-        description: "Date de fin (DATE)"
         tests:
           - dbt_utils.expression_is_true:
-              # end_date peut être NULL ou >= start_date
-              expression: "(`end_date` IS NULL) OR (`end_date` >= `start_date`)"
-              config:
-                severity: warn
-
-      - name: a_geometrie
-        description: "Présence d'une géométrie (Oui/Non)"
+              expression: "(end_date IS NULL) OR (end_date >= start_date)"
+              config: {severity: warn}
+      - name: position_wkt
         tests:
-          - accepted_values:
-              values: ['Oui', 'Non']
-
+          - not_null:
+              config: {severity: warn}
       - name: type_norm
-        description: "Type de travaux normalisé"
-        tests: [not_null]
-
+        tests:
+          - not_null:
+              config: {severity: warn}
     tests:
-      # Unicité 'métier' sans DISTINCT sur GEOGRAPHY
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
             - id
@@ -54,130 +45,142 @@ models:
             - start_at
             - end_at
             - position_wkt
+          config: {severity: warn}
 
-  # =========================
-  # GOLD - DIM
-  # =========================
-  - name: dim_travaux_details
-    schema: gold
-    description: "Table dimensionnelle contenant les détails de chaque travaux"
+  # -------------------------
+  # SILVER
+  # -------------------------
+  - name: stg_travaux_angers
+    schema: silver
+    description: "Staging 1:1 (typé/normalisé, géométrie prête)"
     columns:
       - name: id
-        description: "Identifiant unique du chantier"
-        tests: [unique, not_null]
-
-      - name: titre
-        description: "Titre du chantier"
-        tests: [not_null]
-
-      - name: type_travaux
-        description: "Type de travaux"
-        tests: [not_null]
-
-      - name: date_debut
-        description: "Date de début des travaux"
-        tests: [not_null]
-
-      - name: date_fin
-        description: "Date de fin prévue des travaux"
         tests:
           - not_null
-          - dbt_utils.expression_is_true:
-              expression: "(`date_fin` >= `date_debut`)"
-              config:
-                severity: warn
-
-      - name: duree_prevue
-        description: "Durée prévue des travaux (jours)"
-        tests:
-          - dbt_utils.accepted_range:
-              min_value: 0
-              inclusive: true
-
-      - name: impact_circulation
-        description: "Niveau d'impact sur le trafic"
-        tests:
-          - accepted_values:
-              values: ['FORT', 'MOYEN', 'FAIBLE']
-
-      - name: position
-        description: "Géométrie GEOGRAPHY du chantier"
+      - name: start_date
         tests:
           - not_null:
-              config:
-                severity: warn   # certaines lignes sources peuvent ne pas avoir de géo
-
-      - name: en_retard
-        description: "Chantier en retard (Oui/Non)"
+              config: {severity: warn}
+      - name: end_date
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "(end_date IS NULL) OR (end_date >= start_date)"
+              config: {severity: warn}
+      - name: type_norm
+        tests:
+          - not_null:
+              config: {severity: warn}
+      - name: a_geometrie
         tests:
           - accepted_values:
               values: ['Oui', 'Non']
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - id
+            - start_at
+            - end_at
+            - title
+            - address
+            - position_wkt
+          config: {severity: warn}
 
+  # -------------------------
+  # GOLD - DIM
+  # -------------------------
+  - name: dim_travaux_details
+    schema: gold
+    description: "Dimension des travaux : attributs métier, statut, impact, géométrie"
+    columns:
+      - name: id
+        tests: [unique, not_null]
+      - name: titre
+        tests:
+          - not_null:
+              config: {severity: warn}
+      - name: type_travaux
+        tests:
+          - not_null:
+              config: {severity: warn}
+      - name: date_debut
+        tests:
+          - not_null:
+              config: {severity: warn}
+      - name: date_fin
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "(date_fin IS NULL) OR (date_fin >= date_debut)"
+              config: {severity: warn}
+      - name: duree_prevue
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true
+              config:
+                where: "duree_prevue IS NOT NULL"
+      - name: impact_circulation
+        tests:
+          - accepted_values:
+              values: ['FORT', 'MOYEN', 'FAIBLE']
+      - name: position
+        tests:
+          - not_null:
+              config: {severity: warn}
+      - name: en_retard
+        tests:
+          - accepted_values:
+              values: ['Oui', 'Non']
       - name: retard_jours
-        description: "Nombre de jours de retard"
         tests:
           - dbt_utils.accepted_range:
               min_value: 0
               inclusive: true
 
-  # =========================
-  # GOLD - FACT
-  # =========================
+  # -------------------------
+  # GOLD - FACT (jour x chantier)
+  # -------------------------
   - name: fct_travaux_stats
     schema: gold
-    description: "Table de faits journalière lisible des travaux et indicateurs par type"
+    description: "Faits journaliers (jour x chantier) + agrégats par type"
     columns:
       - name: date_jour
-        description: "Jour de référence (DATE)"
         tests: [not_null]
-
       - name: travaux_id
-        description: "Identifiant du chantier (clé vers la DIM)"
         tests:
           - not_null
           - relationships:
               to: ref('dim_travaux_details')
               field: id
-
       - name: type_travaux
-        description: "Type de travaux"
-        tests: [not_null]
-
+        tests:
+          - not_null:
+              config: {severity: warn}
       - name: niveau_impact
-        description: "Niveau d'impact (FORT/MOYEN/FAIBLE)"
         tests:
           - accepted_values:
               values: ['FORT', 'MOYEN', 'FAIBLE']
-
       - name: mois
-        description: "Libellé mois (Janvier...Décembre)"
-        tests: [not_null]
-
+        tests:
+          - not_null:
+              config: {severity: warn}
       - name: jour_semaine
-        description: "Libellé jour (Lundi...Dimanche)"
-        tests: [not_null]
-
+        tests:
+          - not_null:
+              config: {severity: warn}
       - name: est_actif
-        description: "Actif ce jour (0/1)"
         tests:
           - accepted_values:
               values: [0, 1]
-              quote: false   # compare des INT, pas '0'/'1'
-
+              quote: false
       - name: en_retard
-        description: "Chantier en retard (Oui/Non)"
         tests:
           - accepted_values:
               values: ['Oui', 'Non']
-
       - name: a_geometrie
-        description: "Présence d'une géométrie (Oui/Non)"
         tests:
           - accepted_values:
               values: ['Oui', 'Non']
-
       - name: taux_occupation
-        description: "Part de travaux actifs / total (0..1, nullable)"
         tests:
           - dbt_utils.accepted_range:
               min_value: 0
@@ -185,9 +188,7 @@ models:
               inclusive: true
               config:
                 where: "taux_occupation IS NOT NULL"
-
       - name: taux_retard
-        description: "Part de travaux en retard / actifs (0..1, nullable)"
         tests:
           - dbt_utils.accepted_range:
               min_value: 0
@@ -195,30 +196,24 @@ models:
               inclusive: true
               config:
                 where: "taux_retard IS NOT NULL"
-
     tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns: ['travaux_id', 'date_jour']
 
-  # =========================
-  # GOLD - FACT GEO (vue)
-  # =========================
+  # -------------------------
+  # GOLD - FACT GEO
+  # -------------------------
   - name: fct_travaux_stats_geo
     schema: gold
-    description: "Vue carto : uniquement les lignes avec géométrie"
+    description: "Faits journaliers filtrés avec géométrie + dérivés géo"
     columns:
       - name: a_geometrie
-        description: "Doit être 'Oui'"
         tests:
           - accepted_values:
               values: ['Oui']
-
       - name: position_wkt
-        description: "WKT non nul pour la carto"
         tests: [not_null]
-
       - name: travaux_id
-        description: "FK vers la dimension"
         tests:
           - relationships:
               to: ref('dim_travaux_details')

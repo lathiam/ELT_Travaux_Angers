@@ -153,3 +153,84 @@
 2025-08-10 14:50:20,516 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
 2025-08-10 14:50:20,516 - INFO - Début du chargement des données dans BigQuery
 2025-08-10 14:50:25,062 - INFO - Chargement terminé dans BigQuery
+2025-08-10 19:10:17,503 - INFO - Début du script load.py
+2025-08-10 19:10:19,971 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 19:10:19,972 - INFO - Fichier détecté : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 19:10:19,975 - INFO - Lignes détectées (brut, en-tête inclus): 3182
+2025-08-10 19:10:20,124 - INFO - Client BigQuery initialisé
+2025-08-10 19:10:20,124 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
+2025-08-10 19:10:20,125 - INFO - Config job -> write:WRITE_TRUNCATE | create:CREATE_IF_NEEDED | delimiter:',' | encoding:UTF-8 | quoted_newlines:True | ignore_unknown:True
+2025-08-10 19:10:20,125 - INFO - Début du chargement des données dans BigQuery…
+2025-08-10 19:10:20,800 - ERROR - Erreur lors du chargement des données dans BigQuery : 400 POST https://bigquery.googleapis.com/upload/bigquery/v2/projects/my-project-travaux-angers/jobs?uploadType=resumable: Schema update options should only be specified with WRITE_APPEND disposition, or with WRITE_TRUNCATE disposition on a table partition.
+Traceback (most recent call last):
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 2676, in load_table_from_file
+    response = self._do_resumable_upload(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 3096, in _do_resumable_upload
+    upload, transport = self._initiate_resumable_upload(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 3165, in _initiate_resumable_upload
+    upload.initiate(
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 420, in initiate
+    return _request_helpers.wait_and_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/resumable_media/requests/_request_helpers.py", line 155, in wait_and_retry
+    response = func()
+               ^^^^^^
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/resumable_media/requests/upload.py", line 416, in retriable_request
+    self._process_initiate_response(result)
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/resumable_media/_upload.py", line 518, in _process_initiate_response
+    _helpers.require_status_code(
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/resumable_media/_helpers.py", line 108, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 400, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.CREATED: 201>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/ELT_Travaux_Angers/load.py", line 166, in <module>
+    job = client.load_table_from_file(source_file, table_id, job_config=job_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/ELT_Travaux_Angers/.env/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 2684, in load_table_from_file
+    raise exceptions.from_http_response(exc.response)
+google.api_core.exceptions.BadRequest: 400 POST https://bigquery.googleapis.com/upload/bigquery/v2/projects/my-project-travaux-angers/jobs?uploadType=resumable: Schema update options should only be specified with WRITE_APPEND disposition, or with WRITE_TRUNCATE disposition on a table partition.
+2025-08-10 19:13:09,803 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 19:13:09,804 - INFO - Début du script load.py
+2025-08-10 19:13:09,804 - INFO - Chemin du fichier CSV : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 19:13:09,947 - INFO - Client BigQuery initialisé
+2025-08-10 19:13:09,948 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
+2025-08-10 19:13:09,948 - INFO - Début du chargement des données dans BigQuery
+2025-08-10 19:13:13,025 - ERROR - Erreur lors du chargement des données dans BigQuery : 400 Provided Schema does not match Table my-project-travaux-angers:travaux_angers.travaux_angers. Field id has changed type from INTEGER to STRING; reason: invalid, message: Provided Schema does not match Table my-project-travaux-angers:travaux_angers.travaux_angers. Field id has changed type from INTEGER to STRING; reason: invalid, message: It looks like you are appending to an existing table with autodetect enabled. Disabling autodetect may resolve this.
+2025-08-10 19:13:38,504 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 19:13:38,504 - INFO - Début du script load.py
+2025-08-10 19:13:38,505 - INFO - Chemin du fichier CSV : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 19:13:38,643 - INFO - Client BigQuery initialisé
+2025-08-10 19:13:38,643 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
+2025-08-10 19:13:38,644 - INFO - Début du chargement des données dans BigQuery
+2025-08-10 19:25:54,758 - INFO - Début du script load.py
+2025-08-10 19:25:59,555 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 19:25:59,555 - INFO - Fichier détecté : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 19:25:59,575 - INFO - Lignes détectées (brut, en-tête inclus): 3182
+2025-08-10 19:25:59,575 - ERROR - Fichier d'identifiants inexistant : /usr/ELT_Travaux_Angers/credentials/mon_compte_de_service.json
+2025-08-10 19:29:02,881 - INFO - Début du script load.py
+2025-08-10 19:29:04,091 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 19:29:04,092 - INFO - Fichier détecté : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 19:29:04,094 - INFO - Lignes détectées (brut, en-tête inclus): 3182
+2025-08-10 19:29:04,095 - ERROR - Fichier d'identifiants inexistant : /chemin/vraiment/existant/mon_compte_de_service.json
+2025-08-10 19:33:49,896 - INFO - Début du script load.py
+2025-08-10 19:33:51,185 - INFO - Module google.cloud.bigquery importé avec succès
+2025-08-10 19:33:51,186 - INFO - Fichier détecté : /usr/ELT_Travaux_Angers/data/data.csv
+2025-08-10 19:33:51,189 - INFO - Lignes détectées (brut, en-tête inclus): 3182
+2025-08-10 19:33:51,189 - INFO - GOOGLE_APPLICATION_CREDENTIALS = /usr/ELT_Travaux_Angers/credentiels/mon_compte_de_service.json
+2025-08-10 19:33:51,190 - INFO - Fichier d'identifiants trouvé : /usr/ELT_Travaux_Angers/credentiels/mon_compte_de_service.json
+2025-08-10 19:33:51,190 - INFO - Table cible : my-project-travaux-angers.travaux_angers.travaux_angers
+2025-08-10 19:33:51,335 - INFO - Client BigQuery initialisé
+2025-08-10 19:33:51,335 - INFO - WRITE_DISPOSITION=WRITE_TRUNCATE | CREATE_DISPOSITION=CREATE_IF_NEEDED
+2025-08-10 19:33:51,335 - INFO - DELIMITER=',' | ENCODING=UTF-8 | QUOTED_NEWLINES=True | IGNORE_UNKNOWN=True
+2025-08-10 19:33:51,953 - INFO - Table existante détectée. Partitionnée: False
+2025-08-10 19:33:51,953 - INFO - schema_update_options désactivé (non autorisé pour cette combinaison).
+2025-08-10 19:33:51,953 - INFO - Début du chargement des données dans BigQuery…
+2025-08-10 19:33:55,687 - INFO - Chargement terminé.
+2025-08-10 19:33:55,916 - INFO - Table my-project-travaux-angers.travaux_angers.travaux_angers -> 3179 lignes, 17 colonnes.
+2025-08-10 19:33:55,917 - INFO - Lignes chargées (job): 3179
+2025-08-10 19:33:55,917 - INFO - Aucune erreur BQ reportée par le job.

@@ -572,3 +572,10 @@ Sortie:
 2025-08-10 14:50:25 - load.py terminé
 2025-08-10 14:50:25 - Début des transformations DBT...
 2025-08-10 14:51:19 - ETL terminé avec succès
+2025-08-10 18:00:05 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-11 18:00:01 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-12 00:00:01 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-12 12:00:03 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-12 18:00:01 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-13 12:00:05 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.
+2025-08-15 12:00:02 - Erreur lors de l'exécution : La variable d'environnement GOOGLE_APPLICATION_CREDENTIALS n'est pas définie.

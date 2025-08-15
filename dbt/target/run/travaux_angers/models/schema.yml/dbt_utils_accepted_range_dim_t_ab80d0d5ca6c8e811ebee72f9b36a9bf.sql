@@ -10,7 +10,7 @@
 
 with meet_condition as(
   select *
-  from `my-project-travaux-angers`.`travaux_angers_gold`.`dim_travaux_details`
+  from (select * from `my-project-travaux-angers`.`travaux_angers_gold`.`dim_travaux_details` where duree_prevue IS NOT NULL) dbt_subquery
 ),
 
 validation_errors as (
