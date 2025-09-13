@@ -9,36 +9,19 @@ TÂCHE :
 Conception d’un pipeline ELT et d’une data warehouse avec architecture Médaillon sous BigQuery/dbt, garantissant des données de qualité et fiables pour l’analytics sur les travaux publics de la Ville d’Angers.
 
 ACTION :
-• Implémenté trois scripts Python pour automatiser le pipeline de données ;
-• Créé extract.py pour extraire les données via l’API open data d’Angers et les stocker en local (CSV) ;
-• Créé load.py pour charger ces données dans BigQuery ;
-• Mis en place d’une architecture médaillon (bronze, argent, or) avec des modèles DBT ;
-• Conçu un script d’orchestration exécutant extraction, chargement et DBT, planifié toutes les 6h via cron (Linux).
+- Implémenté trois scripts Python pour automatiser le pipeline de données ;
+- Créé extract.py pour extraire les données via l’API open data d’Angers et les stocker en local (CSV) ;
+- Créé load.py pour charger ces données dans BigQuery ;
+- Mis en place d’une architecture médaillon (bronze, argent, or) avec des modèles DBT ;
+- Conçu un script d’orchestration exécutant extraction, chargement et DBT, planifié toutes les 6h via cron (Linux).
 
 Résultats :
-• Implémentation des scripts très bien structuré avec des commentaires.
-• Création d’un dossier .env pour mettre les variables d’environnements pour éviter de mettre mes identifiants dans mes codes (sécurité)
-• Création d’un datawarehouse avec des données de très bonnes qualité
-• Automatisation du pipeline pour avoir des données à jour
+- Implémentation des scripts très bien structuré avec des commentaires.
+- Création d’un dossier .env pour mettre les variables d’environnements pour éviter de mettre mes identifiants dans mes codes (sécurité)
+- Création d’un datawarehouse avec des données de très bonnes qualité
+- Automatisation du pipeline pour avoir des données à jour
 
 
-
-
-## 🏗️ Architecture
-
-```mermaid
-graph LR
-    A[API Open Data] -->|extract.py| B[CSV]
-    B -->|load.py| C[(BigQuery)]
-    C -->|dbt| D[Data Warehouse]
-    D -->|Models| E[Analytics]
-
-    style A fill:#85C1E9
-    style B fill:#F8C471
-    style C fill:#76D7C4
-    style D fill:#F1948A
-    style E fill:#BB8FCE
-```
 
 ## 📊 Structure des Données
 
