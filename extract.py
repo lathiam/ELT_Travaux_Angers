@@ -17,7 +17,7 @@ logging.getLogger().addHandler(file_handler)
 BASE = "https://data.angers.fr/api/explore/v2.1/catalog/datasets/info-travaux/records"
 LIMIT = 100
 
-# ⚠️ Choisis l'un des deux WHERE selon ton besoin :
+# Choisis l'un des deux WHERE selon ton besoin :
 # 1) Tout le jeu (aucun filtre) :
 WHERE = None
 # 2) Uniquement les travaux en cours :
@@ -76,3 +76,4 @@ out = data_path / "data.csv"
 df.to_csv(out, index=False)
 logging.info(f"CSV écrit: {out} ({len(df)} lignes)")
 print(f"CSV écrit: {out} ({len(df)} lignes)")
+
